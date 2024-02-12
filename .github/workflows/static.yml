@@ -35,6 +35,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          working-directory: 'stage_feedback_tool/feedback_tool'
       - name: Install dependencies
         run: npm install
       - name: Build
