@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+// import React, { useState } from 'react';
 // import LoginPopup from './LoginPopup';
 
 const Navigation: React.FC = () => {
@@ -38,12 +38,10 @@ const Navigation: React.FC = () => {
       </div>
       {/* <div>
         <button onClick={toggleLoginPopup} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</button>
-        
+        <div style={{position: 'absolute', marginRight: '100%'}}>{showLogin && <LoginPopup toggle={toggleLoginPopup} />}</div>
       </div>  */}
     </div>
   </nav>
-  
-  
   );
 }
 
