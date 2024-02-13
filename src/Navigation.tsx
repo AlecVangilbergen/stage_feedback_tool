@@ -1,18 +1,16 @@
-// src/Navigation.tsx
 import React from 'react';
 
 const Navigation: React.FC = () => {
   return (
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {/* Add more navigation links here if needed */}
-        <li><a href="/">Student Submission</a></li>
-        <li><a href="/">Student Final Submission</a></li>
-        <li><a href="/">Student Analytics</a></li>
-        <li><a href="/">Teacher Analytics</a></li>
-        <li><a href="/">Admin Analytisc</a></li>
-        <li><a href="/">Login</a></li>
+    <nav className="bg-blue-900 text-white py-4">
+      <ul className="flex space-x-4 justify-center">
+        <li><a href="/" className="hover:underline">Home</a></li>
+        <li><a href="/" className="hover:underline">Student Submission</a></li>
+        <li><a href="/" className="hover:underline">Student Final Submission</a></li>
+        <li><a href="/" className="hover:underline">Student Analytics</a></li>
+        <li><a href="/" className="hover:underline">Teacher Analytics</a></li>
+        <li><a href="/" className="hover:underline">Admin Analytics</a></li>
+        <li><a href="/" className="hover:underline">Login</a></li>
       </ul>
     </nav>
   );
