@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home'; // Assuming you have a Home component
 import RegisterPage from './pages/Register'; // Assuming you have a Register component
 import ChatAppPage from './pages/Chat';
+import TeacherTempPage from './pages/TeacherTemplate';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/chat" element={<ChatAppPage />} />
+        <Route path="/teacher" element={<TeacherTempPage />} />
 
         {/* Add more routes as needed */}
       </Routes>

@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
             Student Submission
           </Link>
           <Link to="/teacher" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-            Teacher Submission
+            Teacher Template Generator
           </Link>
           <Link to="/teacher-analytics" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
             Teacher Analytics
