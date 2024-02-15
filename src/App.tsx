@@ -7,6 +7,7 @@ import ChatAppPage from './pages/Chat';
 import TeacherTempPage from './pages/TeacherTemplate';
 import AdminAnalytics from './pages/AdminAnalytics';
 import SubmissionPage from './pages/SubmissionPage';
+import TeacherAnalytics from './pages/TeacherAnalytics';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path="/teacher" element={<TeacherTempPage />} />
         <Route path="/admin" element={<AdminAnalytics />} />
         <Route path="/submission" element={<SubmissionPage />} />
+        <Route path="/teacher-analytics" element={<TeacherAnalytics />} />
 
         {/* Add more routes as needed */}
       </Routes>

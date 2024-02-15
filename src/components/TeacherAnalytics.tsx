@@ -1,19 +1,18 @@
-// src/components/AdminAnalyticsDashboard.tsx
+// src/components/TeacherAnalyticsPage.tsx
 import React, { useState } from 'react';
 
-const AdminAnalyticsDashboard: React.FC = () => {
-  const [templates] = useState<string[]>([
-    'Template 1: React Components',
-    'Template 2: State Management',
-    // Add more templates as needed
+const TeacherAnalyticsPage: React.FC = () => {
+  const [assignments] = useState<string[]>([
+    'Assignment 1: React Components',
+    'Assignment 2: State Management',
+    // Add more assignments as needed
   ]);
 
   const [submissions, setSubmissions] = useState<string[]>([]);
   const [chatGptFeedback, setChatGptFeedback] = useState<string[]>([]);
-  const [teacherRatings, setTeacherRatings] = useState<'like' | 'dislike'[]>([]);
 
   const handleGetFeedback = () => {
-    // Simulate fetching ChatGPT feedback and teacher ratings (replace with actual API call)
+    // Simulate fetching ChatGPT feedback (replace with actual API call)
     const feedback = [
       'Excellent work!',
       'Needs improvement.',
@@ -21,21 +20,26 @@ const AdminAnalyticsDashboard: React.FC = () => {
     ];
     setChatGptFeedback(feedback);
 
-    const ratings = ['like', 'dislike']; // Simulated teacher ratings
-    setTeacherRatings(ratings as any);
-
     // Simulate fetching student submissions (replace with actual API call)
     const studentSubmissions = [
-        'Student A: Lorem ipsum dolor sit amet...',
-        'Student B: Consectetur adipiscing elit...',
-        // Add more submissions as needed
+      'Student A: Lorem ipsum dolor sit amet...',
+      'Student B: Consectetur adipiscing elit...',
+      // Add more submissions as needed
     ];
     setSubmissions(studentSubmissions);
   };
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-semibold mb-4">Admin Analytics Dashboard</h1>
+      <h1 className="text-2xl font-semibold mb-4">Teacher Analytics</h1>
+
+      <select className="w-full p-2 mb-4 text-gray-800 bg-gray-100 rounded-md">
+        {assignments.map((assignment, index) => (
+          <option key={index} value={assignment}>
+            {assignment}
+          </option>
+        ))}
+      </select>
 
       <button
         className="px-4 py-2 bg-blue-500 text-white rounded-md"
@@ -49,10 +53,8 @@ const AdminAnalyticsDashboard: React.FC = () => {
         <ul>
           {submissions.map((submission, index) => (
             <li key={index}>
-              <p>{templates[index]}</p>
-              <p>{submission}</p>
+              {submission}
               <p className="text-gray-600 mt-2">{chatGptFeedback[index]}</p>
-              <p className="text-gray-600 mt-2">Teacher Rating: {teacherRatings[index]}</p>
             </li>
           ))}
         </ul>
@@ -61,4 +63,4 @@ const AdminAnalyticsDashboard: React.FC = () => {
   );
 };
 
-export default AdminAnalyticsDashboard;
+export default TeacherAnalyticsPage;
