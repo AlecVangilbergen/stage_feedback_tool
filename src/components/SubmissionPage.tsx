@@ -1,26 +1,45 @@
 // src/components/SubmissionPage.tsx
+
 import React, { useState } from 'react';
 
 const SubmissionPage: React.FC = () => {
-  const [assignmentDescription] = useState<string>('Write a short essay on React components.');
+  //const [assignmentDescription] = useState<string>('Write a short essay on React components.');
   const [teacherName] = useState<string>('Professor Smith');
   const [submission, setSubmission] = useState<string | null>(null);
+  const [selectedAssignment, setSelectedAssignment] = useState<string | null>(null);
   const [chatGptResponse, setChatGptResponse] = useState<string | null>(null);
 
-  const handleSubmission = () => {
-    // Send submission to backend (replace with actual API call)
-    // Example: sendSubmissionToBackend(submission);
+  const handleAssignmentChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedAssignment(event.target.value);
+  };
 
-    // Simulate ChatGPT response (replace with actual API call)
+  const handleSubmission = () => {
+    // Handle submission logic here
     setChatGptResponse('Your essay is well-structured and provides a clear explanation of React components.');
   };
+
+  const assignments = ['Assignment 1', 'Assignment 2', 'Assignment 3']; // Replace with actual assignment names
 
   return (
     <div className="p-4">
       <h1 className="text-2xl font-semibold mb-4">Assignment</h1>
-      <p>{assignmentDescription}</p>
       <p className="mt-4">Teacher: {teacherName}</p>
 
+      {/* Dropdown for assignments */}
+      <select
+        className="w-full p-2 mt-4 text-gray-800 bg-gray-100 rounded-md"
+        value={selectedAssignment || ''}
+        onChange={handleAssignmentChange}
+      >
+        <option value="" disabled>Select an assignment</option>
+        {assignments.map((assignment, index) => (
+          <option key={index} value={assignment}>
+            {assignment}
+          </option>
+        ))}
+      </select>
+
+      {/* Other components (textarea, file input, etc.) */}
       <textarea
         className="w-full p-2 mt-4 text-gray-800 bg-gray-100 rounded-md resize-none"
         placeholder="Type your answer here..."
