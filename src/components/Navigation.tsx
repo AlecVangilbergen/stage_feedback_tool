@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
           <Link to="/admin" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
             Admin Analytics
           </Link>
-          <Link to="/student" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+          <Link to="/submission" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
             Student Submission
           </Link>
           <Link to="/teacher" className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">

@@ -6,6 +6,7 @@ import RegisterPage from './pages/Register'; // Assuming you have a Register com
 import ChatAppPage from './pages/Chat';
 import TeacherTempPage from './pages/TeacherTemplate';
 import AdminAnalytics from './pages/AdminAnalytics';
+import SubmissionPage from './pages/SubmissionPage';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/chat" element={<ChatAppPage />} />
         <Route path="/teacher" element={<TeacherTempPage />} />
         <Route path="/admin" element={<AdminAnalytics />} />
+        <Route path="/submission" element={<SubmissionPage />} />
 
         {/* Add more routes as needed */}
       </Routes>
