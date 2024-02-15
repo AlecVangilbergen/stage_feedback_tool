@@ -1,6 +1,7 @@
 // src/components/SubmissionPage.tsx
 
 import React, { useState } from 'react';
+import FeedbackBox from './FeedbackBox';
 
 const SubmissionPage: React.FC = () => {
   //const [assignmentDescription] = useState<string>('Write a short essay on React components.');
@@ -66,12 +67,11 @@ const SubmissionPage: React.FC = () => {
         Get Feedback
       </button>
 
-      {chatGptResponse && (
-        <div className="mt-6">
-          <h2 className="text-xl font-semibold">ChatGPT Feedback</h2>
-          <p>{chatGptResponse}</p>
-        </div>
-      )}
+      {/* Pass chatGptResponse as a prop to FeedbackBox */}
+      <div style={{ marginTop: "1%", marginRight: "50%" }}>
+        <FeedbackBox chatGptResponse={chatGptResponse} />
+      </div>
+
     </div>
   );
 };

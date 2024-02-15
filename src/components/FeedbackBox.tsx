@@ -1,32 +1,17 @@
 // src/components/FeedbackBox.tsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const FeedbackBox: React.FC = () => {
-  const [backendResult, setBackendResult] = useState<string | null>(null);
+interface FeedbackBoxProps {
+  chatGptResponse: string | null; // Define prop type for chatGptResponse
+}
 
-  // Simulating backend communication (replace with actual API call)
-  const fetchBackendResult = async () => {
-    try {
-      // Replace with your actual backend API call
-      const response = await fetch("https://api.example.com/your-endpoint");
-      const data = await response.json();
-      setBackendResult(data.result); // Assuming the response has a "result" field
-    } catch (error) {
-      console.error("Error fetching backend result:", error);
-    }
-  };
-
-  // Fetch backend result when component mounts (you can trigger this based on your logic)
-  useEffect(() => {
-    fetchBackendResult();
-  }, []);
-
+const FeedbackBox: React.FC<FeedbackBoxProps> = ({ chatGptResponse }) => {
   return (
     <div style={{marginLeft: '1%', marginRight: '50%'}} className="flex flex-col items-center p-4 bg-gray-200 rounded-lg">
       <textarea
         className="w-full p-2 mb-2 text-gray-800 bg-gray-100 rounded-md resize-none"
-        placeholder="Backend result will appear here"
-        value={backendResult || ""}
+        placeholder="Feedback will appear here"
+        value={chatGptResponse || ""}
         readOnly // Make the textarea non-editable
       />
       <div className="flex justify-between w-full">
