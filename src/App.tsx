@@ -5,6 +5,7 @@ import Home from './pages/Home'; // Assuming you have a Home component
 import RegisterPage from './pages/Register'; // Assuming you have a Register component
 import ChatAppPage from './pages/Chat';
 import TeacherTempPage from './pages/TeacherTemplate';
+import AdminAnalytics from './pages/AdminAnalytics';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/chat" element={<ChatAppPage />} />
         <Route path="/teacher" element={<TeacherTempPage />} />
+        <Route path="/admin" element={<AdminAnalytics />} />
 
         {/* Add more routes as needed */}
       </Routes>

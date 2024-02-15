@@ -43,7 +43,7 @@ const FeedbackBox: React.FC = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span>Thumbs Up</span>
+          <span>Like</span>
         </button>
         <button className="flex items-center space-x-1 text-red-500">
           <svg
@@ -58,7 +58,7 @@ const FeedbackBox: React.FC = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span>Thumbs Down</span>
+          <span>Dislike</span>
         </button>
       </div>
     </div>
