@@ -89,7 +89,12 @@ const SubmissionPage: React.FC = () => {
       <div style={{ marginTop: "1%", marginRight: "50%" }}>
         <FeedbackBox chatGptResponse={chatGptResponse} />
       </div>
+      <button
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md"
 
+      >
+        Submit Assignment
+      </button>
     </div>
   );
 };
