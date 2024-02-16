@@ -61,6 +61,12 @@ const TeacherTemplate: React.FC = () => {
       <h2 style={{ marginLeft: '1%' }} className="text-2xl font-semibold mb-4">Templates</h2>
       {/* Render the FeedbackBox component and pass chatGptResponse as prop */}
       <FeedbackBox chatGptResponse={chatGptResponse} />
+      <br />
+      <div style={{ marginLeft: "1%" }} className="md:w-2/3">
+            <button className="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+              Accept Templates
+            </button>
+          </div>
     </div>
   );
 }
